@@ -15,11 +15,11 @@ let package = Package(
         
             .binaryTarget(
                 name: "NMapsMap",
-                path: "./Frameworks/NMapsMap.xcframework"
+                path: "./Sources/Frameworks/NMapsMap.xcframework"
             ),
             .binaryTarget(
                 name: "NMapsGeometry",
-                path: "./Frameworks/NMapsGeometry.xcframework"
+                path: "./Sources/Frameworks/NMapsGeometry.xcframework"
             ),
             .target(
                 name: "NMapsMapSPM",
