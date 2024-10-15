@@ -12,10 +12,19 @@ let package = Package(
             targets: ["NMapsMapSPM"]),
     ],
     targets: [
-        // Targets are the basic building blocks of a package, defining a module or a test suite.
-        // Targets can depend on other targets in this package and products from dependencies.
-        .target(
-            name: "NMapsMapSPM"),
+        
+            .binaryTarget(
+                name: "NMapsMap",
+                path: "./Frameworks/NMapsMap.xcframework"
+            ),
+            .binaryTarget(
+                name: "NMapsGeometry",
+                path: "./Frameworks/NMapsGeometry.xcframework"
+            ),
+            .target(
+                name: "NMapsMapSPM",
+                dependencies: ["NMapsMap", "NMapsGeometry"]
+            )
 
     ]
 )
